@@ -246,10 +246,10 @@ footer a {
 
 .footer1 .social {
     background-color: #4D4D5F;
-    width: 81px;
+    width: 51px;
     text-align: center;
     display: inline-block;
-    padding: 25px 0;
+    padding: 10px 0;
     border-radius: 50%;
 }
 
@@ -262,5 +262,6 @@ i {
 }
 
 .footer2{
-    align-self: flex-end;
+    /* background: crimson; */
+    margin: 0 0 50px 30px;
 }
