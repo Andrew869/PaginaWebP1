@@ -1,3 +1,11 @@
+* { /* Aportacion numero 1 */
+    -webkit-user-select: none; /* Safari */
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -7,7 +15,7 @@ body {
 
 main {
     /* background-color: #5050d3; */
-    width: 70%;
+    /* width: 80%; */
     margin: 60px auto;
     display: flex;
     align-items: center;
@@ -88,6 +96,10 @@ header {
     padding-right: 100px;
 }
 
+.header2 .div3 li {
+    padding: 10px 0;
+}
+
 .header2 .div3 ul li a{
     color: #0c63ce;
     list-style-type: none; 
@@ -96,14 +108,18 @@ header {
     font-weight: bold;
 }
 
-.header2 .div3 ul li button {
+.header2 .div3 a.botonSign {
     background-color: #F26E22;
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 6px;
+    border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
+}
+
+.header2 .div3 a.botonSign:hover {
+    background-color: #DA621E;
 }
 
 .header2 ul li {
@@ -112,7 +128,7 @@ header {
 
 
 .separator {
-    border-right: 1px solid #717171;
+    border-right: 1px solid #ccc;
 }
 
 table, tr, td {
@@ -125,18 +141,28 @@ header a {
     color: black;
 }
 
-.table1 {
+div.table1 {
     margin-bottom: 80px;
+    /* background-color: crimson; */
+}
+
+div.table1 table {
+    max-width: 1200px;
 }
 
 .table1 tr.title td{
     /* background-color: crimson; */
     padding: 12px;
+    /* background-color: #0088E7; */
 }
 
 .table1 .descrip {
     font-size: 12px;
     color: #717171;
+}
+
+.table1 .descrip td {
+    padding: 0 10px;
 }
 
 .table1 .links a{
@@ -151,26 +177,37 @@ header a {
 
 .table2 {
     margin-bottom: 100px;
+    /* background-color: crimson; */
+}
+
+.table2 table {
+    max-width: 1200px;
+    table-layout: fixed;
+    width: 100%;
 }
 
 .table2 td {
     color: #717171;
-}
-
-/* slider */
-.imagenstl{
-    /* width: 100%; */
+    padding: 0 10px;
 }
 
 .Tab2 td {
-    /* background-color: crimson; */
     padding: 0 20px;
 }
 
+/* slider */
 .slideshow-container {
-    max-width: 1000px;
+    /* display: flex; */
+    /* flex-flow: nowrap; */
     position: relative;
-    margin: auto;
+    background-color: #F4F4F8;
+    width: 100%;
+}
+
+.slideshow-container img {
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 16/6;
 }
 
 .mySlides {
@@ -192,34 +229,81 @@ header a {
     user-select: none;
 }
 
+.prev {
+    left: 30px;
+}
+
 .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+    right: 30px;
+    /* border-radius: 3px 0 0 3px; */
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    /* background-color: rgba(0,0,0,0.8); */
+}
+
+article {
+    color: white;
+    /* background-color: crimson; */
+    position: absolute;
+    width: 100%;
+    bottom: 16%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+article p {
+    font-size: 24px;
+    text-shadow: -1px 1px 8px #000;
+    text-align: center;
+    padding: 0 20%;
+    font-style: italic;
+}
+
+article cite {
+    margin: 10px 0 50px;
+    font-style: normal;
+    text-shadow: -1px 1px 8px #000;
+}
+
+article div {
+    background-color: #3535359f;
+    border-radius: 50%;
+    width: 70px;
+    text-align: center;
+    /* display: inline-block; */
+    padding: 19px 0;
+    padding-left: 8px;
+    border-radius: 50%;
+}
+
+article i {
+    font-size: 40px;
+}
+/* .text, .autor {
+    color: #f2f2f2;
+    position: absolute;
 }
 
 .text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
+    text-shadow: -1px 1px 8px #000;
+    font-size: 26px;
+    bottom: 50%;
     text-align: center;
-}
+    font-style: italic;
+    
+} 
 
-.text1 {
+.autor {
+    text-shadow: -1px 1px 2px #000;
     color: #f2f2f2;
     font-size: 15px;
-    padding: 8px 12px;
     position: absolute;
-    bottom: 8px;
-    width: 100%;
+    bottom: 70px;
+
     text-align: center;
-}
+}*/
 
 .numbertext {
     color: #f2f2f2;
@@ -262,11 +346,13 @@ header a {
 }
 
 .Table_img {
+    width: 100%;
     display: flex;
-    flex-flow: nowrap;
+    /* flex-flow: nowrap; */
     margin-bottom: 50px;
-    /* background-color: #F4F4F8; */
+    background-color: #F4F4F8;
     padding: 40px 0;
+    justify-content: center;
 }
 
 .Table_img table{
@@ -319,23 +405,52 @@ img#abinbev, img#veeva {
     background-color: white;
 }
 
+a.boton1, a.boton2 {
+    width: 200px;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 30px;
+}
+
 a.boton1{
-    background-color: cornsilk;
+    background-color: white;
     color: black;
-    padding: 10px 20px;
-    border-radius: 20px;
+    border: 1px solid #ccc;
+    /* padding: 10px 20px; */
+    border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
+}
+a.boton1:hover {
+    background-color: #FFEBDA;
+    border: 1px solid white;
 }
 
 a.boton2{
     background-color: #F26E22;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
+    /* padding: 10px 20px; */
+    border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
+}
+
+a.boton2:hover {
+    background-color: #DA621E;
+}
+
+a.inicioR{
+    background-color: #0088E7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
 }
 
 a.return{
@@ -346,10 +461,59 @@ a.return{
     border-radius: 6px;
     cursor: pointer;
     text-decoration: none;
+    margin: 0 auto;
+    display: flex;
+}
+
+.termina{
+    background-color: lightgreen;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.borra{
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.log{
+    background-color: lightgreen;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.remember{
+    background-color: lightblue;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 #Rev{
     font-family: 'Rubik Iso', cursive;
+    text-align: center;
+}
+
+table tr .cent{
+    text-align: right;
+    display: inline-block;
+    margin: 0 auto;
 }
 
 caption{
@@ -416,7 +580,7 @@ footer a {
 
 .footer1 .social {
     background-color: #4D4D5F;
-    width: 51px;
+    width: 40px;
     text-align: center;
     display: inline-block;
     padding: 10px 0;
@@ -434,14 +598,18 @@ footer a {
     margin-top: 10px;
 }
 
-i {
-    font-size: 30px;
+.social i {
+    font-size: 18px;
 }
 
 .footer2{
     /* background: crimson; */
     /* margin: 0 0 30px 40px; */
     padding: 20px 0;
+}
+
+.footer2 a {
+    text-decoration: none;
 }
 
 a.return{
@@ -452,4 +620,11 @@ a.return{
     border-radius: 6px;
     cursor: pointer;
     text-decoration: none;
+}
+
+.abuttons {
+    display: flex;
+    /* background-color: crimson; */
+    justify-content: center;
+    margin: 80px 0 40px;
 }

@@ -24,7 +24,7 @@
         </div>
         <div class="header2">
             <div class="div1">
-                <img src="images/ZoomLogo.png" alt="">
+                <a href="index.html"><img src="images/ZoomLogo.png" alt="zoom"></a>
             </div>
             <div class="div2">
                 <ul>
@@ -40,7 +40,7 @@
                     <li><a href="#">JOIN A MEETING</a></li>
                     <li><a href="#">HOST A MEETING &#x25BE;</a></li>
                     <li><a href="#">SING IN</a></li>
-                    <li><button>SING UP, IT'S FREE</button></li>
+                    <li><a href="zoomRegistro.html" class="botonSign">SIGN UP, IT'S FREE</a></li>
                 </ul>
             </div>
         </div>
@@ -64,10 +64,10 @@
                         <td><input type="date" id="fechanam"></td>
                     </tr>
                     <tr>
-                        <td><label for="nombre de usuario">Correo Electronico:</label></td>
+                        <td><label for="correo">Correo Electronico:</label></td>
                         <td><input id="correo" type="email"></td>
                     </tr>
-                    <td>
+                    <tr>
                         <td>Sexo:</td>
                         <td>
                         <input type="radio" name="sexo" value="dama" id="dama" checked>
@@ -75,7 +75,7 @@
                         <input type="radio" name="sexo" value="caballero" id="caballero">
                         <label for="caballero">Hombre</label>
                         </td>
-                    </td>
+                    </tr>
                     <tr>
                         <td>¿Cual es el proposito para usar Zoom?</td>
                         <td>
@@ -89,15 +89,18 @@
                     </tr>
                     <tr>
                         <td>Seleccione el tipo de membresia que quiere</td>
-                        <input list="membresia" id="membresia" name="membresia">
-                        <datalist id="alma">
-                        <option value="Estandar"></option>
-                        <option value="Golden"></option>
-                        <option value="Platinum"></option>
-                        <option value="VIP"></option>
+                        <td>
+                            <input list="membresia" id="memb" name="memb">
+                            <datalist id="membresia">
+                                <option value="Estandar">
+                                <option value="Golden">
+                                <option value="Platinum">
+                                <option value="VIP">
+                            </datalist>
+                        </td>
                     </tr>
                     <tr>
-                        <label for="recozoom">¿Recomendaria utilizar Zoom?</label>
+                        <label for="recozoom">¿Recomendarias utilizar Zoom?</label>
                         <select id="recozoom" name="recozoom">
                         <option value="si">Si</option>
                         <option value="no">No</option>
@@ -105,8 +108,8 @@
                         </select>
                     </tr>
                     <tr>
-                        <td><input onclick="show()" type="button" value="Terminar Registro" title="Guardar info"></td>
-                        <td><input onclick="show()" type="button" value="Borrar" title="Borrar info"></td>
+                        <td><input class="termina" onclick="show()" type="button" value="Terminar Registro" title="Guardar info"></td>
+                        <td><input class="borra" onclick="reset()" type="button" value="Borrar" title="Borrar info"></td>
                     </tr>
                 </table>
             </fieldset>
@@ -202,18 +205,18 @@
                     </select>
                 </div>
                 <div>
-                    <div class="social"><a href="#"><i class="fa-brands fa-wordpress-simple" style="color: #ffffff;"></i></a></div>
-                    <div class="social"><a href="#"><i class="fa-brands fa-linkedin-in" style="color: #ffffff;"></i></a></div>
-                    <div class="social"><a href="#"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a></div>
-                    <div class="social"><a href="#"><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a></div>
-                    <div class="social"><a href="#"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a></div>
+                    <div class="social"><a href="https://blog.zoom.us/es/"><i class="fa-brands fa-wordpress-simple" style="color: #ffffff;"></i></a></div>
+                    <div class="social"><a href="https://www.linkedin.com/uas/login?session_redirect=%2Fcompany%2F2532259"><i class="fa-brands fa-linkedin-in" style="color: #ffffff;"></i></a></div>
+                    <div class="social"><a href="https://twitter.com/zoom_us"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a></div>
+                    <div class="social"><a href="https://www.youtube.com/zoommeetings"><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a></div>
+                    <div class="social"><a href="https://www.facebook.com/zoom"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a></div>
                 </div>
             </div>
         </div>
         <div class="footer2">
             Copyright ©2020 Zoom Video Communications, Inc. All rights reserved.
-            <a href="#">Privacy & Legal Policies</a>
-            <a href="#">About Ads</a>
+            <a href="https://explore.zoom.us/en/trust/resources/">Privacy & Legal Policies &nbsp;|</a>
+            <a href="https://explore.zoom.us/en/privacy/">&nbsp; About Ads</a>
         </div>
     </footer>
 </body>

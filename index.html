@@ -6,25 +6,23 @@
     <script src="https://kit.fontawesome.com/9b86802e8e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/zoom.ico" type="image/x-icon">
+    <script src="js/slide.js"></script>
     <title>Zoom</title>
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-    </script>
 </head>
-<body>
+<body ondragstart="return false;" ondrop="return false;">
     <header>
+        <div id="inicio"></div>
         <div class="header1">
             <ul>
                 <li>REQUEST A DEMO</li>
                 <li>1.888.799.9666</li>
                 <li>RESOURCES &#x25BE;</li>
-                <li>SUPPORT</li>
+                <li ondragstart="return false;" ondrop="return false;">SUPPORT</li>
             </ul>
         </div>
         <div class="header2">
             <div class="div1">
-                <img src="images/ZoomLogo.png" alt="">
+                <a href="index.html"><img src="images/ZoomLogo.png" alt="zoom"></a>
             </div>
             <div class="div2">
                 <ul>
@@ -39,8 +37,8 @@
                 <ul>
                     <li><a href="#">JOIN A MEETING</a></li>
                     <li><a href="#">HOST A MEETING &#x25BE;</a></li>
-                    <li><a href="#">SING IN</a></li>
-                    <li><button>SING UP, IT'S FREE</button></li>
+                    <li><a href="#">SIGN IN</a></li>
+                    <li><a href="zoomRegistro.html" class="botonSign">SIGN UP, IT'S FREE</a></li>
                 </ul>
             </div>
         </div>
@@ -105,41 +103,52 @@
         </div>
         <div class="slideshow-container">
             <div class="mySlides fade">
-            <div class="numbertext">1 / 5</div>
-            <img src="images/Cap5.png" style="width:100%">
-            <div class="text">"Zoom is probably the most well-received collaboration tool that we've seen at Fox in 20 years. There is no other tool that has brought people closer together than Zoom." Doug Goetz at 21st Century Fox</div>
+                <img src="images/video-thumb-20century.jpg">
+                <article>
+                    <p>"Zoom is probably the most well-received collaboration tool that we've seen at Fox in 20 years. There is no other tool that has brought people closer together than Zoom."</p>
+                    <cite>Doug Goetz at 21st Century Fox</cite>
+                    <div><a onclick="plusSlides(-1)"><i class="fa-sharp fa-solid fa-play" style="color: #ffffff;"></i></a></div>
+                </article>
             </div>
             <div class="mySlides fade">
-            <div class="numbertext">2 / 5</div>
-            <img src="images/Cap1.png" style="width:100%">
-            <div class="text">"Zoom is super natural and easy to use - just download it, click, and you're in. I use Zoom on an airplane, in the car, in my house, in the office - everywhere." Jelena Joffe at AB in Bev</div>
+                <img src="images/video-thumb-abinbev.jpg">
+                <article>
+                    <p>"Zoom is super natural and easy to use - just download it, click, and you're in. I use Zoom on an airplane, in the car, in my house, in the office - everywhere."</p>
+                    <cite class="autor">Jelena Joffe at AB in Bev</cite>
+                    <div><a href="https://www.youtube.com/embed/HABjoUIYCRE?rel=0&autoplay=1&showinfo=0"><i class="fa-sharp fa-solid fa-play" style="color: #ffffff;"></i></a></div>
+                </article>
             </div>
             <div class="mySlides fade">
-            <div class="numbertext">3 / 5</div>
-            <img src="images/Cap2.png" style="width:100%">
-            <div class="text">"We like that anybody on the go can use it. We are everywhere, so it's very important to have the most easy way to go and start meetings. Elena Joffe at AB in Bev" Shobhana Ahluwalia at Uber</div>
+                <img src="images/video-thumb-uber.jpg">
+                <article>
+                    <p>"We like that anybody on the go can use it. We are everywhere, so it's very important to have the most easy way to go and start meetings."</p>
+                    <cite>Shobhana Ahluwalia at Uber</cite>
+                    <div><a href="#"><i class="fa-sharp fa-solid fa-play" style="color: #ffffff;"></i></a></div>
+                </article>
             </div>
             <div class="mySlides fade">
-            <div class="numbertext">4 / 5</div>
-            <img src="images/Cap3.png" style="width:100%">
-            <div class="text">"The quality is amazing. We've had fantastic results all over the company." Rujul Pathak at Zendesk</div>
+                <img src="images/Zendesk.jpg">
+                <article>
+                    <p>"The quality is amazing. We've had fantastic results all over the company."</p>
+                    <cite>Rujul Pathak at Zendesk</cite>
+                    <div><a href="#"><i class="fa-sharp fa-solid fa-play" style="color: #ffffff;"></i></a></div>
+                </article>
             </div>
             <div class="mySlides fade">
-            <div class="numbertext">5 / 5</div>
-            <img src="images/Cap4.png" style="width:100%">
-            <div class="text">"We work better together now because we're using Zoom." Peter Gassner at Veeva</div>
+                <img src="images/bg_peter.jpg">
+                <article>
+                    <p>We work better together now because we're using Zoom."</p>
+                    <cite>Peter Gassner at Veeva</cite>
+                    <div><a href="#"><i class="fa-sharp fa-solid fa-play" style="color: #ffffff;"></i></a></div>
+                </article>
             </div>  
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <br>
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span> 
-        </div>
+        <script>
+            let slideIndex = 0;
+            showSlides();
+        </script>
         <div class="Table_img">
             <table>
                 <tr>
@@ -197,17 +206,15 @@
                     <td><img src="images/15Logo.png" class=".imagenstl"></td>
                     <td><img src="images/logo-logitech.png" class=".imagenstl"></td>
                 </tr>
-                <tr class="B">
-                    <div">
-                        <td colspan="2"><a href="zoomRegistro.html" class="boton1">Log in</a></td>
-                    </div>
-                    <div>
-                        <td colspan="3"><a href="zoomMedia.html" class="boton2">Ver Video</a></td>
-                    </div>
-                </tr>
-            </table> 
+            </table>
+            <div class="abuttons">
+                <a href="zoomInicio.html" class="boton1">Log in</a>
+                <a href="zoomMedia.html" class="boton2">Multimedia</a>
+                <a href="#inicio" class="inicioR">Go up &uparrow;</a>
+            </div>
         </div>
     </main>
+    <br>
     <footer>
         <div class="footer1">
             <div class="about">
@@ -293,18 +300,18 @@
                     </select>
                 </div>
                 <div>
-                    <div class="social"><a href="#"><i class="fa-brands fa-wordpress-simple" style="color: #ffffff;"></i></a></div>
-                    <div class="social"><a href="#"><i class="fa-brands fa-linkedin-in" style="color: #ffffff;"></i></a></div>
-                    <div class="social"><a href="#"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a></div>
-                    <div class="social"><a href="#"><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a></div>
-                    <div class="social"><a href="#"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a></div>
+                    <div class="social"><a href="https://blog.zoom.us/es/"><i class="fa-brands fa-wordpress-simple" style="color: #ffffff;"></i></a></div>
+                    <div class="social"><a href="https://www.linkedin.com/uas/login?session_redirect=%2Fcompany%2F2532259"><i class="fa-brands fa-linkedin-in" style="color: #ffffff;"></i></a></div>
+                    <div class="social"><a href="https://twitter.com/zoom_us"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a></div>
+                    <div class="social"><a href="https://www.youtube.com/zoommeetings"><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a></div>
+                    <div class="social"><a href="https://www.facebook.com/zoom"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a></div>
                 </div>
             </div>
         </div>
         <div class="footer2">
             Copyright ©2020 Zoom Video Communications, Inc. All rights reserved.
-            <a href="#">Privacy & Legal Policies</a>
-            <a href="#">About Ads</a>
+            <a href="https://explore.zoom.us/en/trust/resources/">Privacy & Legal Policies &nbsp;|</a>
+            <a href="https://explore.zoom.us/en/privacy/">&nbsp; About Ads</a>
         </div>
     </footer>
 </body>
