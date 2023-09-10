@@ -44,18 +44,42 @@ function currentSlide(index) {
 }
 
 // FUNCION DE VIDEO AL CARUSEL
+function playVideo(url) {
+    let div = document.getElementsByClassName("video-embeded");
+    let frame = document.getElementsByClassName("video-iframe");
+    div[0].style.display = "flex";
+    frame[0].src=url;
+    var symbol = frame[0].src.indexOf("?") > -1 ? "&" : "?";
+    //modify source to autoplay and start video
+    frame[0].src += symbol + "&autoplay=1&mute=1";
+}
+
+function exitVideo() {
+    let div = document.getElementsByClassName("video-embeded");
+    let frame = document.getElementsByClassName("video-iframe");
+    div[0].style.display = "none"
+    frame[0].src="";
+}
+
+var player; // Variable global para el reproductor de YouTube
+
 function onYouTubeIframeAPIReady() {
-    player = new YT.Player('video-container', {
-        height: '360',
-        width: '640',
-        videoId: videoId,
-        playerVars: {
-            'autoplay': 0, // Cambia a 1 para autoplay
-            'controls': 1,
-            'rel': 0,
-            'showinfo': 0
-        }
-    });
+  player = new YT.Player('video-container', {
+    videoId: 'TU_ID_DE_VIDEO',
+    playerVars: {
+      'autoplay': 1, // Auto reproducción
+      'controls': 0, // No mostrar controles nativos de YouTube
+      'loop': 1, // Repetir el video
+      'rel': 0, // Evitar videos relacionados al final
+    },
+    events: {
+      'onReady': onPlayerReady,
+    }
+  });
+}
+
+function onPlayerReady(event) {
+  event.target.playVideo(); // Iniciar la reproducción del video
 }
 
 function show(){

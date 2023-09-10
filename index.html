@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/zoom.ico" type="image/x-icon">
     <script src="js/slide.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <title>Zoom</title>
 </head>
 <body ondragstart="return false;" ondrop="return false;">
@@ -22,7 +23,7 @@
         </div>
         <div class="header2">
             <div class="div1">
-                <a href="index.html"><img src="images/ZoomLogo.png" alt="zoom"></a>
+                <a href="index.html"><img src="images/ZoomLogo.png" alt="zoom" class="zoomInv"></a>
             </div>
             <div class="div2">
                 <ul>
@@ -107,7 +108,7 @@
                 <article>
                     <p>"Zoom is probably the most well-received collaboration tool that we've seen at Fox in 20 years. There is no other tool that has brought people closer together than Zoom."</p>
                     <cite>Doug Goetz at 21st Century Fox</cite>
-                    <div><a onclick="plusSlides(-1)"><i class="fa-sharp fa-solid fa-play" style="color: #ffffff;"></i></a></div>
+                    <a onclick="playVideo('https\://www.youtube.com/embed/YBOPloDwUXk');"><i class="fa-sharp fa-solid fa-play" style="color: #ffffff;" ></i></a>
                 </article>
             </div>
             <div class="mySlides fade">
@@ -115,7 +116,7 @@
                 <article>
                     <p>"Zoom is super natural and easy to use - just download it, click, and you're in. I use Zoom on an airplane, in the car, in my house, in the office - everywhere."</p>
                     <cite class="autor">Jelena Joffe at AB in Bev</cite>
-                    <div><a href="https://www.youtube.com/embed/HABjoUIYCRE?rel=0&autoplay=1&showinfo=0"><i class="fa-sharp fa-solid fa-play" style="color: #ffffff;"></i></a></div>
+                    <a onclick="playVideo('https\://www.youtube.com/embed/HABjoUIYCRE');"><i class="fa-sharp fa-solid fa-play" style="color: #ffffff;"></i></a>
                 </article>
             </div>
             <div class="mySlides fade">
@@ -123,7 +124,7 @@
                 <article>
                     <p>"We like that anybody on the go can use it. We are everywhere, so it's very important to have the most easy way to go and start meetings."</p>
                     <cite>Shobhana Ahluwalia at Uber</cite>
-                    <div><a href="#"><i class="fa-sharp fa-solid fa-play" style="color: #ffffff;"></i></a></div>
+                    <a onclick="playVideo('https\://www.youtube.com/embed/fSmi4Ege8t0');"><i class="fa-sharp fa-solid fa-play" style="color: #ffffff;"></i></a>
                 </article>
             </div>
             <div class="mySlides fade">
@@ -131,7 +132,7 @@
                 <article>
                     <p>"The quality is amazing. We've had fantastic results all over the company."</p>
                     <cite>Rujul Pathak at Zendesk</cite>
-                    <div><a href="#"><i class="fa-sharp fa-solid fa-play" style="color: #ffffff;"></i></a></div>
+                    <a onclick="playVideo('https\://www.youtube.com/embed/pUKAOqtqY9U');"><i class="fa-sharp fa-solid fa-play" style="color: #ffffff;"></i></a>
                 </article>
             </div>
             <div class="mySlides fade">
@@ -139,7 +140,7 @@
                 <article>
                     <p>We work better together now because we're using Zoom."</p>
                     <cite>Peter Gassner at Veeva</cite>
-                    <div><a href="#"><i class="fa-sharp fa-solid fa-play" style="color: #ffffff;"></i></a></div>
+                    <a onclick="playVideo('https\://www.youtube.com/embed/6eC4xcFi4rs');"><i class="fa-sharp fa-solid fa-play" style="color: #ffffff;"></i></a>
                 </article>
             </div>  
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -149,6 +150,17 @@
             let slideIndex = 0;
             showSlides();
         </script>
+        <div class="video-embeded">
+            <a onclick="exitVideo()" class="exit"></a>
+            <iframe width="640" height="360" src="" title="video" frameborder="0" allowscriptaccess="always" class="video-iframe"></iframe>
+        </div>
+        
+        <script>
+            // Llama a la función cuando se cargue la página
+            function loadYouTubePlayer() {
+              onYouTubeIframeAPIReady();
+            }
+        </script>
         <div class="Table_img">
             <table>
                 <tr>
@@ -156,7 +168,7 @@
                     <td class="name">Doug Goetz</td>
                 </tr>
                 <tr class="empresa">
-                    <td><img src="images/logo-20centuryfox.png" alt="fox" id="fox"></td>
+                    <td><img src="images/logo-20centuryfox.png" alt="fox" id="fox" class="logo"></td>
                 </tr>
             </table>
             <table>
@@ -165,7 +177,7 @@
                     <td class="name">Jelena Joffe</td>
                 </tr>
                 <tr class="empresa">
-                    <td><img src="images/logo-abinbev.png" alt="abinbev" id="abinbev"></td>
+                    <td><img src="images/logo-abinbev.png" alt="abinbev" id="abinbev" class="logo"></td>
                 </tr>
             </table>
             <table>
@@ -174,7 +186,7 @@
                     <td class="name">Shobhana ahluwalia</td>
                 </tr>
                 <tr class="empresa">
-                    <td><img src="images/logo-uber.png" alt="uber" id="uber"></img></td>
+                    <td><img src="images/logo-uber.png" alt="uber" id="uber" class="logo"></img></td>
                 </tr>
             </table>
             <table>
@@ -183,7 +195,7 @@
                     <td class="name">Rujul  Pathak</td>
                 </tr>
                 <tr class="empresa">
-                    <td><img src="images/logo_zendesk.png" alt="zendesk" id="zendesk"></td>
+                    <td><img src="images/logo_zendesk.png" alt="zendesk" id="zendesk" class="logo"></td>
                 </tr>
             </table>
             <table>
@@ -192,7 +204,7 @@
                     <td class="name">Peter Gassner</td>
                 </tr>
                 <tr class="empresa">
-                    <td><img src="images/logo_veeva.png" alt="veeva" id="veeva"></td>
+                    <td><img src="images/logo_veeva.png" alt="veeva" id="veeva" class="logo"></td>
                 </tr>
             </table>
         </div>

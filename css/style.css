@@ -131,11 +131,6 @@ header {
     border-right: 1px solid #ccc;
 }
 
-table, tr, td {
-    /* border: 1px solid black; */
-    /* border-collapse: collapse; */
-}
-
 header a {
     text-decoration: none;
     color: black;
@@ -197,8 +192,6 @@ div.table1 table {
 
 /* slider */
 .slideshow-container {
-    /* display: flex; */
-    /* flex-flow: nowrap; */
     position: relative;
     background-color: #F4F4F8;
     width: 100%;
@@ -238,16 +231,12 @@ div.table1 table {
     /* border-radius: 3px 0 0 3px; */
 }
 
-.prev:hover, .next:hover {
-    /* background-color: rgba(0,0,0,0.8); */
-}
-
 article {
     color: white;
     /* background-color: crimson; */
     position: absolute;
     width: 100%;
-    bottom: 16%;
+    bottom: 30%;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -267,7 +256,7 @@ article cite {
     text-shadow: -1px 1px 8px #000;
 }
 
-article div {
+article a {
     background-color: #3535359f;
     border-radius: 50%;
     width: 70px;
@@ -378,10 +367,6 @@ article i {
 .Table_img .empresa td{
     padding-top: 10px;
     display: flex;
-}
-
-.Table_img .empresa img{
-    /* height: 30px; */
 }
 
 img#fox {
@@ -523,10 +508,6 @@ caption{
     /* background-color: crimson; */
 }
 
-.Tab2 caption {
-    /* padding-bottom: 60px; */
-}
-
 footer {
     background-color: #39394D;
     color: white;
@@ -627,4 +608,57 @@ a.return{
     /* background-color: crimson; */
     justify-content: center;
     margin: 80px 0 40px;
+}
+
+div.video-embeded {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: 1;
+    background-color: #00000070;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+div.video-embeded .exit {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+.mzoomInv {
+    -webkit-filter: invert(0%);
+    filter: invert(0%);
+    transition: all 0.3s; 
+  }
+  
+  .zoomInv:hover {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+  }
+
+.avatar{
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    transition: all 0.3s; 
+}
+
+.avatar:hover{
+    -webkit-filter: blur(0px); 
+    filter: blur(0px);
+}
+
+.logo{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: all 0.3s;
+}
+
+.logo:hover{
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
 }
