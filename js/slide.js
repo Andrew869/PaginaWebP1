@@ -83,6 +83,7 @@ function onPlayerReady(event) {
 }
 
 function show(){
+    let datos;
     datos="";
     datos+="Nombre: "+document.getElementById("nombre").value;
     datos+='\n';

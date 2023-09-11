@@ -491,8 +491,9 @@ a.return{
 }
 
 #Rev{
-    font-family: 'Rubik Iso', cursive;
+    font-family: 'Satisfy', cursive;
     text-align: center;
+    font-size: 40px;
 }
 
 table tr .cent{
@@ -516,7 +517,7 @@ footer {
     font-size: 12px;
     align-items: center;
     justify-content: center;
-    padding: 40px 0;
+    padding: 20px 0;
 }
 
 footer a {
@@ -661,4 +662,12 @@ div.video-embeded .exit {
 .logo:hover{
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
+}
+
+.multi {
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: -1px 9px 12px -5px #000000;
+    border-radius: 30px;
 }

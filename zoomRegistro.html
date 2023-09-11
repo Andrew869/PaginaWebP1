@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/9b86802e8e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/formStyles.css">
     <link rel="shortcut icon" href="images/zoom.ico" type="image/x-icon">
     <title>ZoomEncuesta</title>
     <script>
@@ -46,73 +47,82 @@
         </div>
     </header>
     <div>
-        <form action="">
-            <fieldset>
-                <legend>Registro de nuevo usuario</legend>
-                <br>
-                <table>
-                    <tr>
-                        <td><label for="nombre de usuario">Nombre de cliente:</label></td>
-                        <td><input id="nombre" type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="edad">Edad:</label></td>
-                        <td><input type="number" min="18" max="200"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="fechanam">Fecha de nacimiento</label></td>
-                        <td><input type="date" id="fechanam"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="correo">Correo Electronico:</label></td>
-                        <td><input id="correo" type="email"></td>
-                    </tr>
-                    <tr>
-                        <td>Sexo:</td>
-                        <td>
-                        <input type="radio" name="sexo" value="dama" id="dama" checked>
-                        <label for="dama">Mujer</label>
-                        <input type="radio" name="sexo" value="caballero" id="caballero">
-                        <label for="caballero">Hombre</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>¿Cual es el proposito para usar Zoom?</td>
-                        <td>
-                            <input type="radio" name="tipo" value="cuesla" id="cuesla" checked>
-                            <label for="cuesla">Cuestiones laborales</label>
-                            <input type="radio" name="tipo" value="cuesesc" id="cuesesc">
-                            <label for="cuesesc">Cuestiones Escolares</label>
-                            <input type="radio" name="tipo" value="otros" id="otros">
-                            <label for="otros">Otros</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Seleccione el tipo de membresia que quiere</td>
-                        <td>
-                            <input list="membresia" id="memb" name="memb">
-                            <datalist id="membresia">
-                                <option value="Estandar">
-                                <option value="Golden">
-                                <option value="Platinum">
-                                <option value="VIP">
-                            </datalist>
-                        </td>
-                    </tr>
-                    <tr>
+        <form class="form2">
+            <legend>Registro de nuevo usuario</legend>
+            <table>
+                <tr>
+                    <td><label for="nombre de usuario">Nombre de cliente:</label></td>
+                    <td><input id="nombre" type="text"></td>
+                </tr>
+                <tr>
+                    <td><label for="edad">Edad:</label></td>
+                    <td><input type="number" min="18" max="200"></td>
+                </tr>
+                <tr>
+                    <td><label for="fechanam">Fecha de nacimiento</label></td>
+                    <td><input type="date" id="fechanam"></td>
+                </tr>
+                <tr>
+                    <td><label for="correo">Correo Electronico:</label></td>
+                    <td><input id="correo" type="email"></td>
+                </tr>
+                <tr>
+                    <td>Sexo:</td>
+                    <td>
+                    <input type="radio" name="sexo" value="dama" id="dama" checked>
+                    <label for="dama">Mujer</label>
+                    <input type="radio" name="sexo" value="caballero" id="caballero">
+                    <label for="caballero">Hombre</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>¿Cual es el proposito para usar Zoom?</td>
+                    <td>
+                        <input type="radio" name="tipo" value="cuesla" id="cuesla" checked>
+                        <label for="cuesla">Cuestiones laborales</label>
+                        <input type="radio" name="tipo" value="cuesesc" id="cuesesc">
+                        <label for="cuesesc">Cuestiones Escolares</label>
+                        <input type="radio" name="tipo" value="otros" id="otros">
+                        <label for="otros">Otros</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Seleccione el tipo de membresia que quiere</td>
+                    <td>
+                        <input list="membresia" id="memb" name="memb">
+                        <datalist id="membresia">
+                            <option value="Estandar">
+                            <option value="Golden">
+                            <option value="Platinum">
+                            <option value="VIP">
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <label for="recozoom">¿Recomendarias utilizar Zoom?</label>
+                    </td>
+                    <td>
                         <select id="recozoom" name="recozoom">
-                        <option value="si">Si</option>
-                        <option value="no">No</option>
-                        <option value="talvez">Tal vez</option>
+                            <option value="si">Si</option>
+                            <option value="no">No</option>
+                            <option value="talvez">Tal vez</option>
                         </select>
-                    </tr>
-                    <tr>
-                        <td><input class="termina" onclick="show()" type="button" value="Terminar Registro" title="Guardar info"></td>
-                        <td><input class="borra" onclick="reset()" type="button" value="Borrar" title="Borrar info"></td>
-                    </tr>
-                </table>
-            </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="donde">¿Quien te hablo de nosotros?</label>
+                    </td>
+                    <td>
+                        <textarea id="donde" name="donde" rows="4" cols="50">Escribelo aquí...</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input class="termina" onclick="show()" type="button" value="Terminar Registro" title="Guardar info"></td>
+                    <td><input class="borra" onclick="reset()" type="button" value="Borrar" title="Borrar info"></td>
+                </tr>
+            </table>
         </form>
     </div>
     <table>

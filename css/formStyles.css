@@ -1,0 +1,184 @@
+.form {
+    width: 400px;
+    background: #FFFFFF;
+    position: relative;
+    padding: 20px;
+    box-shadow: -1px 9px 12px -5px #000000;
+    border-radius: 30px;
+    margin: 20px auto;
+}
+
+form legend {
+    color: #318EFF;
+    font-size: 30px;
+}
+  
+.button {
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 25px 0;
+    color: #318EFF;
+    background: transparent;
+    font-size: 20px;
+    transition: 0.35s;
+    border-radius: 20px;
+    border: 1px solid #318EFF;
+    /* cursor: crosshair; */
+}
+  
+.button:hover {
+    color: #ffffff;
+    background: #318EFF;
+    /* letter-spacing: 1px; */
+}
+  
+.link-content {
+    width: 100%;
+    margin: 15px 0;
+}
+  
+.links {
+    position: relative;
+    text-decoration: none;
+    transition: 0.5s;
+    color: #8e8989;
+    font-size: 18px;
+}
+  
+p {
+    display: inline;
+    color: #777373;
+  
+}
+  
+p .links {
+    color: #318EFF;
+}
+  
+.links {
+    color: #318EFF;
+}
+  
+.links span {
+    display: block;
+    position: absolute;
+    background: #318EFF;
+}
+  
+.links span:nth-child(1) {
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+  
+.links:hover span:nth-child(1) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.form-input-animado {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    margin-top: 20px;
+}
+  
+.form-input-animado input {
+    width: 100%;
+    height: 100%;
+    color: #777777;
+    font-size: 15px;
+    padding-top: 10px;
+    border: none;
+    background: transparent;
+}
+  
+.form-input-animado input:focus{
+    outline: none;
+}
+  
+.form-input-animado label {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #ccc;
+}
+  
+.form-input-animado label::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #318EFF;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+}
+  
+.form-input-animado .content{
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+  
+.form-input-animado input:focus+.label-input .content,
+.form-input-animado input:valid+.label-input .content,
+.form-input-animado input:hover+.label-input .content {
+    transform: translateY(-100%);
+    font-size: 16px;
+    color: #318EFF;
+}
+  
+.form-input-animado input:focus+.label-input::after,
+.form-input-animado input:valid+.label-input::after {
+    transform: translateX(0%);
+}
+
+input[type="text"] {
+    border: 1px solid cyan; 
+}
+
+input[type="email"] {
+    border: 2px solid lightgreen; 
+  }
+
+input[type="date"] {
+    border: 1px solid #999;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form2 {
+    width: 800px;
+    background: #FFFFFF;
+    position: relative;
+    padding: 20px;
+    box-shadow: -1px 9px 12px -5px #000000;
+    border-radius: 30px;
+    margin: 20px auto;
+}
+
+.form2 table tr{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form2 table td {
+    padding: 20px;
+}

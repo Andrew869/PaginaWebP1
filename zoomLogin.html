@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/9b86802e8e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/formStyles.css">
     <link rel="shortcut icon" href="images/zoom.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>ZoomEncuesta</title>
@@ -47,29 +48,34 @@
         </div>
     </header>
     <div>
-        <form action="">
-            <fieldset>
-                <legend class="animate__animated animate__bounce">Inicio de sesion</legend>
-                <br>
-                <table>
-                    <tr>
-                        <td><label for="nombre de usuario">Correo Electronico:</label></td>
-                    </tr>
-                    <tr>
-                        <td><input id="correo" type="email"></td>
-                        <td>&nbsp;</td>
-                    </tr>
-                        <td><label for="Contraseña">Contraseña</label></td>
-                    <tr>
-                        <td><input id="nombre" type="text"></td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td><input class="log" onclick="show()" type="button" value="Iniciar sesion" title="Guardar info"></td>
-                        <td><input class="remember" onclick="show()" type="button" value="¿No recuerdas tu contraseña?" title="Borrar info"></td>
-                    </tr>
-                </table>
-            </fieldset>
+        <form class="form" id="form">
+            <legend class="animate__animated animate__bounce">Log in</legend>
+
+            <div class="form-input-animado">
+                <input type="text" name="email" autocomplete="off" required />
+                <label for="email" class="label-input">
+                    <span class="content">Email</span>
+                </label>
+            </div>
+
+            <div class="form-input-animado">
+                <input type="password" name="pass" autocomplete="off" required />
+                <label for="pass" class="label-input">
+                    <span class="content">Contraseña</span>
+                </label>
+            </div>
+
+            <a href="#" class="button" id="button">Inicia sesión</a>
+
+            <div class="link-content">
+                <p>
+                    Únete<a class="links" href="signin.html"><span></span> registrándote </a>con nosotros.
+                </p>
+            </div>
+
+            <div class="link-content">
+                <a class="links" href="#"><span></span>¿Olvidaste la contraseña?</a>
+            </div>
         </form>
     </div>
     <table>
