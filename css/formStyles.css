@@ -150,7 +150,7 @@ p .links {
     transform: translateX(0%);
 }
 
-input[type="text"] {
+.form2 input[type="text"] {
     border: 1px solid cyan; 
 }
 
